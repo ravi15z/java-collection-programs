@@ -8,8 +8,10 @@ import java.util.stream.Collectors;
 public class mapPrApplication {
     public static void main(String[] args) {
 
-        getKey_ValuesList();
+        FrequencyProg fp = new FrequencyProg();
+        fp.problems();
 
+        getKey_ValuesList();
         addMapElement();
     }
 

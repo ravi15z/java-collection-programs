@@ -10,7 +10,6 @@ public class mapPrApplication {
 
         FrequencyProg fp = new FrequencyProg();
         fp.problems();
-
         getKey_ValuesList();
         addMapElement();
     }

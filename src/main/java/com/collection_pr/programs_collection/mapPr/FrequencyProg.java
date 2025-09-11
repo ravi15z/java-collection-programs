@@ -18,10 +18,16 @@ public class FrequencyProg {
         // Find the frequency of each character of a string using HashMap?
         String inputString = "Java Concept Of The Day";
         Map<Character, Integer> map1 = new HashMap<>();
+        Map<Character, Integer> map2 = new HashMap<>();
         System.out.println("Java Concept Of The Day");
         for (char c : inputString.toCharArray()) {
             if (c != ' ') {
                 map1.put(c, map1.getOrDefault(c, 0) + 1);
+            }
+        }
+        for (Map.Entry<Character, Integer> entry : map1.entrySet()) {
+            if ((!map2.containsKey(entry.getKey()))) {
+                map2.put(entry.getKey(), entry.getValue());
             }
         }
         System.out.println("frequency of each character in the String: " + map1);

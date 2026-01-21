@@ -80,6 +80,11 @@ public class StreamApiMain {
 
         Employee max = departments.stream().flatMap(dep -> dep.getEmployees().stream())
                 .max(Comparator.comparingInt(emp -> emp.getId())).get();
+
+        System.out
+                .println("R list" + departments.stream().flatMap(d -> d.getEmployees().stream()).filter(e -> e.getName()
+                        .startsWith("R")).map(emp -> emp.getName()).collect(Collectors.toList()));
+
         System.out.println("Highest Id employee : " + max);
 
     }

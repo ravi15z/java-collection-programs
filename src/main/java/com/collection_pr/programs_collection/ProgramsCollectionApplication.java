@@ -28,6 +28,11 @@ public class ProgramsCollectionApplication {
 			sb.append(entry.getKey()).append(entry.getValue());
 		}
 		System.out.println(" char count in string: " + sb.toString());
+		// using stream
+		Map<Character, Integer> countMap1 = new HashMap<>();
+		StringBuilder sb1 = new StringBuilder();
+		countMap1.entrySet().stream().forEach(entry -> sb1.append(entry.getKey()).append(entry.getValue()));
+		System.out.println(sb1.toString());
 		// checkSingletone();
 		// getCuncureHM();
 		// getExceptionInHM();
